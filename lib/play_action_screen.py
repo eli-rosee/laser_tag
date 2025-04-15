@@ -13,7 +13,7 @@ class PlayActionScreen(QWidget):
         self.red_player_scores = {player_id: 0 for player_id, _, _ in red_players}
         self.green_player_scores = {player_id: 0 for player_id, _, _ in green_players}
         self.flash_timer = QTimer(self)
-        # self.flash_timer.timeout.connect(self.flash_high_team_score)
+        self.flash_timer.timeout.connect(self.flash_high_team_score)
         self.flash_state = True
         self.flash_timer.start(500)
         self.setWindowTitle("Play Action Screen")
@@ -177,46 +177,58 @@ class PlayActionScreen(QWidget):
             raw_data = self.UDPClientSocketReceive.recvfrom(self.bufferSize)
             raw_player_data = raw_data[0]
             player_data = raw_player_data.decode('utf-8')
-
-            attacker_equip_id = None
-            target_equip_id = None
-
-            parts = player_data.split(':')
-
-            if len(parts) == 2:
-                attacker_equip_id = parts[0]
-                target_equip_id = parts[1]
-            else:
-                return
-
-            attacker = None
-            attacker_team = None
-            target = None
-            target_team = None
-
-            for player in self.red_players + self.green_players:
-                if player[2] == attacker_equip_id:
-                    attacker = player
-                    attacker_team = "red" if player in self.red_players else "green"
-            for player in self.red_players + self.green_players:
-                if player[2] == target_equip_id:
-                    target = player
-                    target_team = "red" if player in self.red_players else "green"
-            
-            packet = attacker_equip_id if attacker_team == target_team else target_equip_id
-            self.UDPServerSocketTransmit.sendto(str.encode(str(packet)), self.serverAddressPort)
-
-            self.change_player_score(attacker_equip_id, target_equip_id, attacker, attacker_team, target, target_team)
+            if ':' in player_data:
+                self.handle_external_message(player_data)
+                print(f'Recieved from Client: {player_data}')
 
         except BlockingIOError:
             pass
 
-    def change_player_score(self, attacker_equip_id, target_equip_id, attacker, attacker_team, target, target_team):
+    def get_name_from_equip_id(self, equip_id: str) -> str:
+        for _, name, eid in self.red_players + self.green_players:
+            if eid == equip_id:
+                return name
+        return f"Unknown({equip_id})"
+
+    def handle_external_message(self, message: str):
+            attacker_equip_id, target_or_code = message.split(":")
+            attacker_name = self.get_name_from_equip_id(attacker_equip_id)
+
+            if target_or_code in ("43", "53"):
+                base_hit_text = f"{attacker_name} hit the base!"
+                self.append_to_current_action(f"<div style='text-align: center;'>{base_hit_text}</div>")
+                self.change_team_score(base_hit_text)
+                self.UDPServerSocketTransmit.sendto(str.encode(str(target_or_code)), self.serverAddressPort)
+            else:
+                target_name = self.get_name_from_equip_id(target_or_code)
+                action = f"{attacker_name} hit {target_name}"
+                self.append_to_current_action(f"<div style='text-align: center;'>{action}</div>")
+                self.change_player_score(attacker_equip_id, target_or_code)
+
+    def change_player_score(self, attacker_equip_id, target_equip_id):
+        attacker = None
+        target = None
+        attacker_team = None
+        target_team = None
+
+        for player in self.red_players:
+            if player[2] == attacker_equip_id:
+                attacker = player
+                attacker_team = "red"
+        for player in self.green_players:
+            if player[2] == attacker_equip_id:
+                attacker = player
+                attacker_team = "green"
+        for player in self.red_players + self.green_players:
+            if player[2] == target_equip_id:
+                target = player
+                target_team = "red" if player in self.red_players else "green"
 
         if not attacker:
             print(f"Unknown attacker with equip ID {attacker_equip_id}")
             return
-        
+
+
         if attacker_team and target_team:
             label_dict = self.red_player_labels if attacker_team == "red" else self.green_player_labels
             score_dict = self.red_player_scores if attacker_team == "red" else self.green_player_scores
@@ -227,10 +239,10 @@ class PlayActionScreen(QWidget):
 
             if attacker_team == target_team:
                 score_change = -10
-                self.UDPServerSocketTransmit.sendto(str.encode(str(attacker_equip_id)), self.clientAddressPort)
+                self.UDPServerSocketTransmit.sendto(str.encode(str(attacker_equip_id)), self.serverAddressPort)
             else:
                 score_change = 10
-                self.UDPServerSocketTransmit.sendto(str.encode(str(target_equip_id)), self.clientAddressPort)
+                self.UDPServerSocketTransmit.sendto(str.encode(str(target_equip_id)), self.serverAddressPort)  
 
             score_dict[player_id] += score_change
 
@@ -320,7 +332,10 @@ class PlayActionScreen(QWidget):
 
         else:
             print("ERROR: Player not found in either team.")
+            self.sort_players()
+            return
 
+        
         self.sort_players()
 
 

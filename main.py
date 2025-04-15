@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
     def open_splash(self):
         self.splash_screen = SplashScreen()
         self.splash_screen.showMaximized()
-        QTimer.singleShot(2000, self.close_splash_and_open_entry)
+        QTimer.singleShot(3000, self.close_splash_and_open_entry)
 
     def close_splash_and_open_entry(self):
         if self.splash_screen:

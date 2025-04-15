@@ -157,6 +157,8 @@ class PlayActionScreen(QWidget):
 
         self.UDPServerSocketTransmit.sendto(str.encode(str(202)), self.serverAddressPort)
 
+        self.showMaximized()
+
 
     def update_game_timer(self):
         """Update the game timer display every second."""
@@ -164,6 +166,10 @@ class PlayActionScreen(QWidget):
         
         if self.game_time_remaining <= 0:
             self.game_timer.stop()
+
+            for i in range(3):
+                self.UDPServerSocketTransmit.sendto(str.encode(str(221)), self.serverAddressPort)
+                
             self.game_timer_label.setText("00:00")
             self.append_to_current_action("<div style='text-align: center; color: red;'>GAME OVER!</div>")
 

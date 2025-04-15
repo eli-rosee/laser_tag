@@ -307,7 +307,7 @@ class PlayerEntryScreen(QWidget):
         popup.setLayout(layout)
         popup.exec()
 
-    # Collects player data into two // ADD READ ONLY CHECK SO THAT ONLY ENTERED ROWS WILL REGISTER
+    # Collects player data into two lists
     def get_player_data(self):
         red_players = []
         green_players = []
@@ -316,7 +316,7 @@ class PlayerEntryScreen(QWidget):
             player_id = row[2].text().strip()
             code_name = row[3].text().strip()
             equip_id = row[4].text().strip()
-            if player_id and code_name and equip_id: 
+            if player_id and code_name and equip_id:
                 red_players.append((player_id, code_name, equip_id))
 
         for row in self.green_row:

@@ -11,7 +11,7 @@ class CountdownWindow(QMainWindow):
         super().__init__()
 
         self.on_exit = on_exit
-        self.time_interval = 140
+        self.time_interval = 1400
 
         self.setGeometry(700, 300, 500, 500)
         self.setStyleSheet("background-color: black;")

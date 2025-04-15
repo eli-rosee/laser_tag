@@ -10,6 +10,8 @@ class PlayActionScreen(QWidget):
     def __init__(self, ip_address, red_players, green_players, on_exit):
         super().__init__()
 
+        self._running = True
+
         self.red_player_scores = {player_id: 0 for player_id, _, _ in red_players}
         self.green_player_scores = {player_id: 0 for player_id, _, _ in green_players}
         self.flash_timer = QTimer(self)
@@ -137,7 +139,7 @@ class PlayActionScreen(QWidget):
         self.setLayout(main_layout)
 
         # Initialize and start game timer (6 minutes)
-        self.game_time_remaining = 6 * 60  # 6 minutes in seconds
+        self.game_time_remaining = 30  # 6 minutes in seconds
         self.game_timer = QTimer(self)
         self.game_timer.timeout.connect(self.update_game_timer)
         self.game_timer.start(1000)  # Update every second
@@ -169,7 +171,8 @@ class PlayActionScreen(QWidget):
 
             for i in range(3):
                 self.UDPServerSocketTransmit.sendto(str.encode(str(221)), self.serverAddressPort)
-                
+                self._running = False
+
             self.game_timer_label.setText("00:00")
             self.append_to_current_action("<div style='text-align: center; color: red;'>GAME OVER!</div>")
 
@@ -199,17 +202,17 @@ class PlayActionScreen(QWidget):
     def handle_external_message(self, message: str):
             attacker_equip_id, target_or_code = message.split(":")
             attacker_name = self.get_name_from_equip_id(attacker_equip_id)
-
-            if target_or_code in ("43", "53"):
-                base_hit_text = f"{attacker_name} hit the base!"
-                self.append_to_current_action(f"<div style='text-align: center;'>{base_hit_text}</div>")
-                self.change_team_score(base_hit_text)
-                self.UDPServerSocketTransmit.sendto(str.encode(str(target_or_code)), self.serverAddressPort)
-            else:
-                target_name = self.get_name_from_equip_id(target_or_code)
-                action = f"{attacker_name} hit {target_name}"
-                self.append_to_current_action(f"<div style='text-align: center;'>{action}</div>")
-                self.change_player_score(attacker_equip_id, target_or_code)
+            if(self._running):
+                if target_or_code in ("43", "53"):
+                    base_hit_text = f"{attacker_name} hit the base!"
+                    self.append_to_current_action(f"<div style='text-align: center;'>{base_hit_text}</div>")
+                    self.change_team_score(base_hit_text)
+                    self.UDPServerSocketTransmit.sendto(str.encode(str(target_or_code)), self.serverAddressPort)
+                else:
+                    target_name = self.get_name_from_equip_id(target_or_code)
+                    action = f"{attacker_name} hit {target_name}"
+                    self.append_to_current_action(f"<div style='text-align: center;'>{action}</div>")
+                    self.change_player_score(attacker_equip_id, target_or_code)
 
     def change_player_score(self, attacker_equip_id, target_equip_id):
         attacker = None

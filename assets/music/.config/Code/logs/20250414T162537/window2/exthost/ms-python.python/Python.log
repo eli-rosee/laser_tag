@@ -1,0 +1,26 @@
+2025-04-14 23:21:36.130 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2025-04-14 23:21:36.130 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2025-04-14 23:21:36.443 [info] Starting Environment refresh
+2025-04-14 23:21:36.444 [info] Searching for interpreters in posix paths locator
+2025-04-14 23:21:36.520 [info] Searching for pyenv environments
+2025-04-14 23:21:36.520 [info] Searching for conda environments
+2025-04-14 23:21:36.536 [info] Searching for global virtual environments
+2025-04-14 23:21:36.536 [info] Searching for custom virtual environments
+2025-04-14 23:21:36.615 [info] pyenv is not installed
+2025-04-14 23:21:36.616 [info] Finished searching for pyenv environments: 169 milliseconds
+2025-04-14 23:21:36.622 [info] Finished searching for custom virtual envs: 148 milliseconds
+2025-04-14 23:21:36.721 [info] > conda info --json
+2025-04-14 23:21:38.454 [info] Finished searching for global virtual envs: 1983 milliseconds
+2025-04-14 23:21:47.704 [info] Found: /bin/python3 --> /bin/python3.9
+2025-04-14 23:21:47.717 [info] Found: /bin/python3.9 --> /bin/python3.9
+2025-04-14 23:21:48.509 [info] Found: /usr/bin/python3 --> /usr/bin/python3.9
+2025-04-14 23:21:48.511 [info] Found: /usr/bin/python3.9 --> /usr/bin/python3.9
+2025-04-14 23:21:48.750 [info] Finished searching for interpreters in posix paths locator: 12226 milliseconds
+2025-04-14 23:21:48.750 [info] > /bin/python3 -I ~/.vscode/extensions/ms-python.python-2025.4.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2025.4.0-linux-x64/python_files/interpreterInfo.py
+2025-04-14 23:21:48.823 [info] > /usr/bin/python3 -I ~/.vscode/extensions/ms-python.python-2025.4.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2025.4.0-linux-x64/python_files/interpreterInfo.py
+2025-04-14 23:21:48.823 [info] Environments refresh paths discovered (event): 12414 milliseconds
+2025-04-14 23:21:48.823 [info] Environments refresh paths discovered: 12416 milliseconds
+2025-04-14 23:21:49.328 [info] Environments refresh finished (event): 12921 milliseconds
+2025-04-14 23:21:49.360 [info] Environment refresh took 12954 milliseconds
+2025-04-14 23:21:49.785 [info] Python interpreter path: /bin/python3
+2025-04-14 23:21:55.399 [info] Starting Pylance language server.

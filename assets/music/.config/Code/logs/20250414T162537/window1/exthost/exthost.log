@@ -1,0 +1,12 @@
+2025-04-14 16:25:55.371 [info] Extension host with pid 3173 started
+2025-04-14 16:25:58.120 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-04-14 16:25:58.471 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-04-14 16:25:58.653 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python'
+2025-04-14 16:26:00.746 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2025-04-14 16:26:02.061 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-04-14 16:26:02.432 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2025-04-14 16:26:07.655 [info] Eager extensions activated
+2025-04-14 16:26:08.086 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-04-14 16:26:08.128 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-04-14 23:19:36.990 [info] Extension host terminating: renderer closed the MessagePort
+2025-04-14 23:19:37.912 [info] Extension host with pid 3173 exiting with code 0

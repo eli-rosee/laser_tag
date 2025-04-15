@@ -1,0 +1,35 @@
+[CLIENT] 0x4200004
+  [RES_NAME] code
+  [RES_CLASS] Code
+  [WM_NAME] play_action_screen.py - Visual Studio Code
+  [GEOMETRY] (0,27,958,930)
+  [GEOMETRY-MAXIMIZED] (175,27,479,930)
+  [SCREEN] 0
+  [DESK] 0
+  [FLAGS] 0x10300
+[CLIENT] 0x5000003
+  [CLIENT_ID] 2174589d5-8a48-4c61-853d-1f3808ac392e
+  [CLIENT_LEADER] 0x5000001
+  [WINDOW_ROLE] xfce4-terminal-1744568248-260704069
+  [RES_NAME] xfce4-terminal
+  [RES_CLASS] Xfce4-terminal
+  [WM_NAME] Terminal - student@photon: ~/SE/Team5-Software-Engineering
+  [WM_COMMAND] (1) "xfce4-terminal"
+  [GEOMETRY] (5,56,814,483)
+  [GEOMETRY-MAXIMIZED] (5,56,814,483)
+  [SCREEN] 0
+  [DESK] 0
+  [FLAGS] 0x10000
+[CLIENT] 0x2e0003d
+  [CLIENT_ID] 2de3d6bfd-f45a-4ee2-8051-0e7ffcdac7c2
+  [CLIENT_LEADER] 0x2e00001
+  [WINDOW_ROLE] browser
+  [RES_NAME] Navigator
+  [RES_CLASS] firefox-esr
+  [WM_NAME] git-credential-manager/docs/install.md at release · git-ecosystem/git-credential-manager · GitHub — Mozilla Firefox
+  [WM_COMMAND] (1) "firefox-esr"
+  [GEOMETRY] (-26,4,1010,982)
+  [GEOMETRY-MAXIMIZED] (-26,4,1010,982)
+  [SCREEN] 0
+  [DESK] 0
+  [FLAGS] 0x10000

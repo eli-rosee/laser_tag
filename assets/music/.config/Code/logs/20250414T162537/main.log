@@ -1,0 +1,16 @@
+2025-04-14 16:25:39.247 [info] update#setState idle
+2025-04-14 16:26:08.826 [info] update#setState checking for updates
+2025-04-14 16:26:08.886 [info] update#setState available for download
+2025-04-14 23:19:37.545 [error] CodeWindow: renderer process gone (reason: killed, code: 9)
+2025-04-14 23:19:38.739 [warning] No ptyHost heartbeat after 6 seconds
+2025-04-14 23:19:38.745 [info] Extension host with pid 3173 exited with code: 0, signal: unknown.
+2025-04-14 23:19:44.603 [error] [uncaught exception in main]: TypeError: Object has been destroyed
+2025-04-14 23:19:44.603 [error] TypeError: Object has been destroyed
+    at file:///usr/share/code/resources/app/out/main.js:50:5155
+    at App.T (file:///usr/share/code/resources/app/out/main.js:28:7333)
+    at App.emit (node:events:530:35)
+    at BrowserWindow.<anonymous> (node:electron/js2c/browser_init:2:12727)
+    at BrowserWindow.emit (node:events:530:35)
+2025-04-14 23:20:09.789 [info] update#setState idle
+2025-04-14 23:26:08.842 [info] update#setState checking for updates
+2025-04-14 23:26:09.101 [info] update#setState available for download

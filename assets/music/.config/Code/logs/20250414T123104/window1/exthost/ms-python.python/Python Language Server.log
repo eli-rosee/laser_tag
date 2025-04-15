@@ -1,0 +1,20 @@
+2025-04-14 12:31:36.787 [info] (Client) Pylance async client (2025.4.1) started with python extension (2025.4.0)
+2025-04-14 12:31:38.910 [info] [Info  - 12:31:38 PM] (3333) Server root directory: file:///home/student/.vscode/extensions/ms-python.vscode-pylance-2025.4.1/dist
+2025-04-14 12:31:38.912 [info] [Info  - 12:31:38 PM] (3333) Pylance language server 2025.4.1 (pyright version 1.1.398, commit 4f24eccc) starting
+2025-04-14 12:31:39.053 [info] [Info  - 12:31:39 PM] (3333) Starting service instance "<default>" for workspace ""
+2025-04-14 12:31:39.154 [info] [Info  - 12:31:39 PM] (3333) No include entries specified; assuming /<default workspace root>
+2025-04-14 12:31:39.155 [info] [Info  - 12:31:39 PM] (3333) Auto-excluding **/node_modules
+2025-04-14 12:31:39.156 [info] [Info  - 12:31:39 PM] (3333) Auto-excluding **/__pycache__
+2025-04-14 12:31:39.157 [info] [Info  - 12:31:39 PM] (3333) Auto-excluding **/.*
+2025-04-14 12:31:40.273 [info] [Error - 12:31:40 PM] (3333) File or directory "/<default workspace root>" does not exist.
+2025-04-14 12:31:40.276 [info] [Info  - 12:31:40 PM] (3333) No source files found.
+2025-04-14 12:31:40.846 [info] [Info  - 12:31:40 PM] (3333) No include entries specified; assuming /<default workspace root>
+2025-04-14 12:31:40.847 [info] [Info  - 12:31:40 PM] (3333) Auto-excluding **/node_modules
+2025-04-14 12:31:40.847 [info] [Info  - 12:31:40 PM] (3333) Auto-excluding **/__pycache__
+2025-04-14 12:31:40.849 [info] [Info  - 12:31:40 PM] (3333) Auto-excluding **/.*
+2025-04-14 12:31:41.173 [info] [Error - 12:31:41 PM] (3333) File or directory "/<default workspace root>" does not exist.
+2025-04-14 12:31:41.173 [info] [Info  - 12:31:41 PM] (3333) No source files found.
+2025-04-14 12:31:44.475 [info] [Info  - 12:31:44 PM] (3333) BG: Priority queue background worker(2) root directory: file:///home/student/.vscode/extensions/ms-python.vscode-pylance-2025.4.1/dist
+2025-04-14 12:31:44.481 [info] [Info  - 12:31:44 PM] (3333) BG: Priority queue background worker(2) started
+2025-04-14 12:34:49.472 [info] [Info  - 12:34:49 PM] (3333) BG: [BG(1)] Long operation: analyzing: file:///home/student/test/ui/entry.py (2475ms)
+2025-04-14 12:34:52.151 [info] [Info  - 12:34:52 PM] (3333) BG: [BG(1)] Long operation: SemanticTokens full at file:///home/student/test/ui/entry.py (2668ms)

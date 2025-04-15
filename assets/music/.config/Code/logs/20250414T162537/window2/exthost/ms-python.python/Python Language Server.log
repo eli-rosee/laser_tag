@@ -1,0 +1,27 @@
+2025-04-14 23:21:50.292 [info] (Client) Pylance async client (2025.4.1) started with python extension (2025.4.0)
+2025-04-14 23:21:55.301 [info] [Info  - 11:21:55 PM] (9002) Server root directory: file:///home/student/.vscode/extensions/ms-python.vscode-pylance-2025.4.1/dist
+2025-04-14 23:21:55.301 [info] [Info  - 11:21:55 PM] (9002) Pylance language server 2025.4.1 (pyright version 1.1.398, commit 4f24eccc) starting
+2025-04-14 23:21:55.454 [info] [Info  - 11:21:55 PM] (9002) Starting service instance "<default>" for workspace ""
+2025-04-14 23:21:55.584 [info] [Info  - 11:21:55 PM] (9002) Setting environmentName for service "<default>": "3.9.2 (global)"
+2025-04-14 23:21:55.586 [info] [Info  - 11:21:55 PM] (9002) Setting pythonPath for service "<default>": "/bin/python3"
+2025-04-14 23:21:55.587 [info] [Info  - 11:21:55 PM] (9002) No include entries specified; assuming /<default workspace root>
+2025-04-14 23:21:55.588 [info] [Info  - 11:21:55 PM] (9002) Auto-excluding **/node_modules
+2025-04-14 23:21:55.589 [info] [Info  - 11:21:55 PM] (9002) Auto-excluding **/__pycache__
+2025-04-14 23:21:55.590 [info] [Info  - 11:21:55 PM] (9002) Auto-excluding **/.*
+2025-04-14 23:21:55.642 [info] [Info  - 11:21:55 PM] (9002) Assuming Python version 3.9.2.final.0
+2025-04-14 23:21:56.551 [info] [Error - 11:21:56 PM] (9002) File or directory "/<default workspace root>" does not exist.
+2025-04-14 23:21:56.600 [info] [Info  - 11:21:56 PM] (9002) No source files found.
+2025-04-14 23:21:57.087 [info] [Info  - 11:21:57 PM] (9002) Setting environmentName for service "<default>": "3.9.2 (global)"
+2025-04-14 23:21:57.087 [info] [Info  - 11:21:57 PM] (9002) Setting pythonPath for service "<default>": "/bin/python3"
+2025-04-14 23:21:57.088 [info] [Info  - 11:21:57 PM] (9002) No include entries specified; assuming /<default workspace root>
+2025-04-14 23:21:57.088 [info] [Info  - 11:21:57 PM] (9002) Auto-excluding **/node_modules
+2025-04-14 23:21:57.089 [info] [Info  - 11:21:57 PM] (9002) Auto-excluding **/__pycache__
+2025-04-14 23:21:57.099 [info] [Info  - 11:21:57 PM] (9002) Auto-excluding **/.*
+2025-04-14 23:21:57.553 [info] [Info  - 11:21:57 PM] (9002) Assuming Python version 3.9.2.final.0
+2025-04-14 23:21:58.191 [info] [Error - 11:21:58 PM] (9002) File or directory "/<default workspace root>" does not exist.
+2025-04-14 23:21:58.202 [info] [Info  - 11:21:58 PM] (9002) No source files found.
+2025-04-14 23:22:04.362 [info] [Info  - 11:22:04 PM] (9002) BG: Priority queue background worker(2) root directory: file:///home/student/.vscode/extensions/ms-python.vscode-pylance-2025.4.1/dist
+2025-04-14 23:22:04.365 [info] [Info  - 11:22:04 PM] (9002) BG: Priority queue background worker(2) started
+2025-04-14 23:22:09.684 [info] [Info  - 11:22:09 PM] (9002) BG: [BG(1)] Long operation: SemanticTokens range 0:0 - 103:54 at file:///home/student/laser_tag/core/database.py (4857ms)
+2025-04-14 23:25:01.656 [info] [Info  - 11:25:01 PM] (9002) [FG] Long operation: parsing: file:///home/student/.local/lib/python3.9/site-packages/PyQt6/QtCore.pyi (2216ms)
+2025-04-14 23:27:59.177 [info] [Info  - 11:27:59 PM] (9002) [FG] Long operation: parsing: file:///home/student/.local/lib/python3.9/site-packages/PyQt6/QtGui.pyi (2295ms)

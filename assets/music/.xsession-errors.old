@@ -1,0 +1,248 @@
+Xsession: X session started for student at Mon 14 Apr 2025 12:23:29 PM CDT
+WARNING: tempfile is deprecated; consider using mktemp instead.
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/student/.Xauthority
+localuser:student being added to access control list
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting USER=student
+dbus-update-activation-environment: setting LC_TIME=en_US.UTF-8
+dbus-update-activation-environment: setting XDG_SESSION_TYPE=x11
+dbus-update-activation-environment: setting HOME=/home/student
+dbus-update-activation-environment: setting DESKTOP_SESSION=xfce
+dbus-update-activation-environment: setting XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting LC_MONETARY=en_US.UTF-8
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting IM_CONFIG_PHASE=1
+dbus-update-activation-environment: setting LOGNAME=student
+dbus-update-activation-environment: setting GTK_IM_MODULE=ibus
+dbus-update-activation-environment: setting XDG_SESSION_CLASS=user
+dbus-update-activation-environment: setting PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+dbus-update-activation-environment: setting LC_ADDRESS=en_US.UTF-8
+dbus-update-activation-environment: setting XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+dbus-update-activation-environment: setting XDG_RUNTIME_DIR=/run/user/1001
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting LC_TELEPHONE=en_US.UTF-8
+dbus-update-activation-environment: setting LANG=en_US.UTF-8
+dbus-update-activation-environment: setting XDG_CURRENT_DESKTOP=XFCE
+dbus-update-activation-environment: setting XDG_SESSION_DESKTOP=xfce
+dbus-update-activation-environment: setting XAUTHORITY=/home/student/.Xauthority
+dbus-update-activation-environment: setting XMODIFIERS=@im=ibus
+dbus-update-activation-environment: setting XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/student
+dbus-update-activation-environment: setting SHELL=/bin/bash
+dbus-update-activation-environment: setting LC_NAME=en_US.UTF-8
+dbus-update-activation-environment: setting GDMSESSION=xfce
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting LC_MEASUREMENT=en_US.UTF-8
+dbus-update-activation-environment: setting LC_IDENTIFICATION=en_US.UTF-8
+dbus-update-activation-environment: setting GPG_AGENT_INFO=/run/user/1001/gnupg/S.gpg-agent:0:1
+dbus-update-activation-environment: setting QT_IM_MODULE=ibus
+dbus-update-activation-environment: setting PWD=/home/student
+dbus-update-activation-environment: setting XDG_DATA_DIRS=/usr/share/xfce4:/usr/local/share/:/usr/share/
+dbus-update-activation-environment: setting CLUTTER_IM_MODULE=ibus
+dbus-update-activation-environment: setting LC_NUMERIC=en_US.UTF-8
+dbus-update-activation-environment: setting LC_PAPER=en_US.UTF-8
+17:23:29.494811 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:29.494816 main     Log opened 2025-04-14T17:23:29.494806000Z
+17:23:29.498107 main     OS Product: Linux
+17:23:29.499465 main     OS Release: 5.10.0-34-amd64
+17:23:29.500514 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:29.501269 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:29.501271 main     Process ID: 2311
+17:23:29.501272 main     Package type: LINUX_64BITS_GENERIC
+17:23:29.501544 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:29.501789 main      Service: Shared Clipboard
+17:23:29.512281 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:29.512287 main     Log opened 2025-04-14T17:23:29.512277000Z
+17:23:29.512609 main     OS Product: Linux
+17:23:29.512797 main     OS Release: 5.10.0-34-amd64
+17:23:29.512954 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:29.513211 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:29.513213 main     Process ID: 2314
+17:23:29.513214 main     Package type: LINUX_64BITS_GENERIC
+17:23:29.513472 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:29.513698 main      Service: VirtualBox host version check
+17:23:29.536501 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:29.536504 main     Log opened 2025-04-14T17:23:29.536496000Z
+17:23:29.536877 main     OS Product: Linux
+17:23:29.537054 main     OS Release: 5.10.0-34-amd64
+17:23:29.537210 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:29.537388 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:29.537390 main     Process ID: 2321
+17:23:29.537390 main     Package type: LINUX_64BITS_GENERIC
+17:23:29.537647 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:29.537983 main      Service: Seamless Mode Support
+17:23:29.566049 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:29.566052 main     Log opened 2025-04-14T17:23:29.566044000Z
+17:23:29.567094 main     OS Product: Linux
+17:23:29.567266 main     OS Release: 5.10.0-34-amd64
+17:23:29.567440 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:29.567619 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:29.567620 main     Process ID: 2329
+17:23:29.567621 main     Package type: LINUX_64BITS_GENERIC
+17:23:29.567871 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:29.568097 main      Service: Drag'n'Drop
+17:23:29.582544 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:29.582547 main     Log opened 2025-04-14T17:23:29.582540000Z
+17:23:29.582856 main     OS Product: Linux
+17:23:29.583030 main     OS Release: 5.10.0-34-amd64
+17:23:29.583187 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:29.583876 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:29.583878 main     Process ID: 2337
+17:23:29.583879 main     Package type: LINUX_64BITS_GENERIC
+17:23:29.584170 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:29.584621 main      Service: VMSVGA display assistant
+/usr/bin/startxfce4: X server already running on display :0
+/usr/bin/iceauth:  creating new authority file /run/user/1001/ICEauthority
+xfce4-session-Message: 12:23:30.308: SSH authentication agent is already running
+gpg-agent: a gpg-agent is already running - not starting a new one
+
+(xfwm4:2447): xfwm4-WARNING **: 12:23:32.324: Unsupported GL renderer (llvmpipe (LLVM 11.0.1, 128 bits)).
+
+** (xfce4-power-manager:2518): WARNING **: 12:23:36.002: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.xfce.PowerManager': no such name
+
+
+** (xfce4-power-manager:2518): WARNING **: 12:23:36.008: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.freedesktop.PowerManagement': no such name
+
+Xfce power manager is not running
+
+(xfce4-power-manager:2518): GLib-GObject-WARNING **: 12:23:36.718: ../../../gobject/gsignal.c:2614: signal 'Changed' is invalid for instance '0x555b019820b0' of type 'GDBusProxy'
+
+(xfce4-power-manager:2518): xfce4-power-manager-WARNING **: 12:23:37.190: could not map keysym 1008ffa8 to keycode
+
+
+** (xfce4-power-manager:2518): WARNING **: 12:23:37.220: No outputs have backlight property
+
+(xfce4-power-manager:2518): xfce4-power-manager-WARNING **: 12:23:37.253: Failed to get keyboard max brightness level : GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.UPower.KbdBacklight” on object at path /org/freedesktop/UPower/KbdBacklight
+
+(xfce4-panel:2502): garcon-CRITICAL **: 12:23:37.498: garcon_gtk_menu_get_desktop_actions_menu: assertion 'actions != NULL' failed
+
+(xfce4-panel:2502): garcon-CRITICAL **: 12:23:37.675: garcon_gtk_menu_get_desktop_actions_menu: assertion 'actions != NULL' failed
+
+(xfce4-panel:2502): garcon-CRITICAL **: 12:23:37.852: garcon_gtk_menu_get_desktop_actions_menu: assertion 'actions != NULL' failed
+17:23:38.150019 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:38.150024 main     Log opened 2025-04-14T17:23:38.150012000Z
+
+(xfce4-panel:2502): garcon-CRITICAL **: 12:23:38.165: garcon_gtk_menu_get_desktop_actions_menu: assertion 'actions != NULL' failed
+17:23:38.158654 main     OS Product: Linux
+17:23:38.187411 main     OS Release: 5.10.0-34-amd64
+17:23:38.188514 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:38.189270 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:38.189273 main     Process ID: 2560
+17:23:38.189274 main     Package type: LINUX_64BITS_GENERIC
+17:23:38.189558 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:38.189797 main      Service: Shared Clipboard
+17:23:38.480589 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:38.480593 main     Log opened 2025-04-14T17:23:38.480582000Z
+17:23:38.481062 main     OS Product: Linux
+17:23:38.481272 main     OS Release: 5.10.0-34-amd64
+17:23:38.481446 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:38.481636 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:38.481637 main     Process ID: 2576
+17:23:38.481638 main     Package type: LINUX_64BITS_GENERIC
+17:23:38.481898 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:38.482355 main      Service: VirtualBox host version check
+Xfce Power Manager: Another power manager is already running
+17:23:38.775467 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:38.775471 main     Log opened 2025-04-14T17:23:38.775461000Z
+17:23:38.775824 main     OS Product: Linux
+17:23:38.775990 main     OS Release: 5.10.0-34-amd64
+17:23:38.776158 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:38.776398 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:38.776400 main     Process ID: 2586
+17:23:38.776401 main     Package type: LINUX_64BITS_GENERIC
+17:23:38.776705 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:38.776944 main      Service: Seamless Mode Support
+17:23:39.032072 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:39.032076 main     Log opened 2025-04-14T17:23:39.032067000Z
+17:23:39.032813 main     OS Product: Linux
+17:23:39.033018 main     OS Release: 5.10.0-34-amd64
+17:23:39.033192 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:39.033381 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:39.033383 main     Process ID: 2601
+17:23:39.033383 main     Package type: LINUX_64BITS_GENERIC
+17:23:39.033665 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:39.033933 main      Service: Drag'n'Drop
+17:23:39.696976 main     VBoxClient 7.0.18 r162988 (verbosity: 0) linux.amd64 (May  2 2024 10:34:13) release log
+17:23:39.696983 main     Log opened 2025-04-14T17:23:39.696971000Z
+17:23:39.697955 main     OS Product: Linux
+17:23:39.698131 main     OS Release: 5.10.0-34-amd64
+17:23:39.698321 main     OS Version: #1 SMP Debian 5.10.234-1 (2025-02-24)
+17:23:39.698510 main     Executable: /opt/VBoxGuestAdditions-7.0.18/bin/VBoxClient
+17:23:39.698511 main     Process ID: 2617
+17:23:39.698512 main     Package type: LINUX_64BITS_GENERIC
+17:23:39.698772 main      VBoxClient 7.0.18 r162988 started. Verbose level = 0. Wayland environment detected: no
+17:23:39.699762 main      Service: VMSVGA display assistant
+Another notification daemon is running, exiting
+
+** (wrapper-2.0:2522): WARNING **: 12:23:40.556: No outputs have backlight property
+
+(wrapper-2.0:2523): GLib-GIO-CRITICAL **: 12:23:40.703: g_file_new_for_path: assertion 'path != NULL' failed
+
+(wrapper-2.0:2523): GLib-GIO-CRITICAL **: 12:23:40.703: g_file_monitor_file: assertion 'G_IS_FILE (file)' failed
+
+(wrapper-2.0:2523): GLib-GObject-WARNING **: 12:23:40.703: invalid (NULL) pointer instance
+
+(wrapper-2.0:2523): GLib-GObject-CRITICAL **: 12:23:40.703: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(wrapper-2.0:2523): Gtk-WARNING **: 12:23:40.703: Attempting to add a widget with type GtkToggleButton to a container of type XfcePanelPlugin, but the widget is already inside a container of type XfcePanelPlugin, please remove the widget from its existing container first.
+
+** (xiccd:2550): WARNING **: 12:23:41.207: EDID is empty
+
+(wrapper-2.0:2544): Gtk-WARNING **: 12:23:42.189: Negative content width -1 (allocation 1, extents 1x1) while allocating gadget (node button, owner XfceArrowButton)
+
+(wrapper-2.0:2523): Gtk-WARNING **: 12:23:42.487: Negative content width -3 (allocation 1, extents 2x2) while allocating gadget (node button, owner GtkToggleButton)
+
+(wrapper-2.0:2521): Gtk-WARNING **: 12:23:42.510: Negative content width -3 (allocation 1, extents 2x2) while allocating gadget (node button, owner PulseaudioButton)
+
+(wrapper-2.0:2522): Gtk-WARNING **: 12:23:42.576: Negative content width -3 (allocation 1, extents 2x2) while allocating gadget (node button, owner PowerManagerButton)
+
+(nm-applet:2565): Gdk-CRITICAL **: 12:23:42.649: gdk_window_thaw_toplevel_updates: assertion 'window->update_and_descendants_freeze_count > 0' failed
+
+** (xiccd:2550): WARNING **: 12:29:13.961: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:29:13.965: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:29:41.672: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:29:41.675: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:29:42.409: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:29:42.413: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:33:11.518: EDID is empty
+
+** (xiccd:2550): WARNING **: 12:33:11.685: EDID is empty
+
+** (xiccd:2550): WARNING **: 13:32:10.348: EDID is empty
+
+** (xiccd:2550): WARNING **: 13:32:10.398: EDID is empty
+
+(xfce4-power-manager:2518): GLib-CRITICAL **: 13:35:33.231: Source ID 266 was not found when attempting to remove it
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:34.384: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:34.388: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:34.395: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:34.395: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:49.693: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:49.708: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:49.710: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:49.732: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:49.734: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-panel:2502): Gtk-CRITICAL **: 14:41:49.734: gtk_icon_theme_load_icon: assertion 'icon_name != NULL' failed
+
+(xfce4-power-manager:2518): GLib-CRITICAL **: 15:27:33.233: Source ID 295 was not found when attempting to remove it
+
+(xfce4-power-manager:2518): GLib-CRITICAL **: 16:07:33.284: Source ID 610 was not found when attempting to remove it

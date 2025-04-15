@@ -1,0 +1,17 @@
+2025-04-14 14:20:11.985 [info] Started local extension host with pid 5193.
+2025-04-14 14:20:19.739 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-04-14 14:20:21.894 [info] [perf] Render performance baseline is 65ms
+2025-04-14 15:30:46.395 [error] Error: Aborted onWillSaveTextDocument-event after 1750ms
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1270:10003
+2025-04-14 16:08:15.973 [info] Extension host (LocalProcess pid: 5193) is unresponsive.
+2025-04-14 16:08:16.622 [info] Extension host (LocalProcess pid: 5193) is responsive.
+2025-04-14 16:08:17.777 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session
+2025-04-14 16:08:23.876 [info] UNRESPONSIVE extension host: starting to profile NOW
+2025-04-14 16:08:41.962 [info] Extension host (LocalProcess pid: 5193) is unresponsive.
+2025-04-14 16:08:42.087 [info] Extension host (LocalProcess pid: 5193) is responsive.
+2025-04-14 16:08:42.204 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session
+2025-04-14 16:09:06.316 [info] UNRESPONSIVE extension host: starting to profile NOW
+2025-04-14 16:09:58.421 [info] Extension host (LocalProcess pid: 5193) is unresponsive.
+2025-04-14 16:09:58.603 [info] Extension host (LocalProcess pid: 5193) is responsive.
+2025-04-14 16:09:58.624 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session
+2025-04-14 16:10:12.397 [info] UNRESPONSIVE extension host: starting to profile NOW

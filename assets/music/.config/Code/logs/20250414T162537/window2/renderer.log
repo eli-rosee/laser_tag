@@ -1,0 +1,15 @@
+2025-04-14 23:19:48.961 [warning] Creation of workbench contribution 'workbench.contrib.preferencesActions' took 35ms.
+2025-04-14 23:19:49.073 [warning] Creation of workbench contribution 'workbench.chat.setup' took 44ms.
+2025-04-14 23:19:50.286 [error] [uncaught exception in main]: Object has been destroyed: TypeError: Object has been destroyed
+    at file:///usr/share/code/resources/app/out/main.js:50:5155
+    at App.T (file:///usr/share/code/resources/app/out/main.js:28:7333)
+    at App.emit (node:events:530:35)
+    at BrowserWindow.<anonymous> (node:electron/js2c/browser_init:2:12727)
+    at BrowserWindow.emit (node:events:530:35)
+2025-04-14 23:19:50.796 [info] Started local extension host with pid 8682.
+2025-04-14 23:20:05.572 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-04-14 23:20:12.549 [info] [perf] Render performance baseline is 224ms
+2025-04-14 23:21:42.373 [info] Extension host (LocalProcess pid: 8682) is unresponsive.
+2025-04-14 23:21:45.555 [info] UNRESPONSIVE extension host: starting to profile NOW
+2025-04-14 23:21:46.040 [info] Extension host (LocalProcess pid: 8682) is responsive.
+2025-04-14 23:21:46.041 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session

@@ -1,0 +1,20 @@
+2025-04-14 16:26:01.835 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2025-04-14 16:26:01.835 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2025-04-14 16:26:08.967 [info] > python -c "import sys;print(sys.executable)"
+2025-04-14 16:26:09.062 [error] [Error: Command failed: python -c "import sys;print(sys.executable)"
+/bin/sh: 1: python: not found
+
+	at genericNodeError (node:internal/errors:984:15)
+	at wrappedFn (node:internal/errors:538:14)
+	at ChildProcess.exithandler (node:child_process:423:12)
+	at ChildProcess.emit (node:events:530:35)
+	at maybeClose (node:internal/child_process:1104:16)
+	at Socket.<anonymous> (node:internal/child_process:456:11)
+	at Socket.emit (node:events:518:28)
+	at Pipe.<anonymous> (node:net:343:12)] {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: 'python -c "import sys;print(sys.executable)"'
+}
+2025-04-14 16:26:17.771 [info] Starting Pylance language server.

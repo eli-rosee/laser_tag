@@ -33,10 +33,10 @@ class MainWindow(QMainWindow):
         self.open_entry()
 
     def open_entry(self):
-        self.player_entry_screen = PlayerEntryScreen(on_exit=self.close_entry)
+        self.player_entry_screen = PlayerEntryScreen(on_exit=self.close_player_entry)
         self.player_entry_screen.showMaximized()
 
-    def close_entry(self):
+    def close_player_entry(self):
         if self.player_entry_screen:
             self.ip_address = self.player_entry_screen.network
             self.red_players, self.green_players = self.player_entry_screen.get_player_data()
@@ -65,6 +65,7 @@ class MainWindow(QMainWindow):
             self.play_action_screen.close()
             self.play_action_screen.destroy()
             self.play_action_screen = None
+            self.open_entry()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

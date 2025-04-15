@@ -2,19 +2,28 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QTextEdit
 from PyQt6.QtCore import QTimer, Qt
 import sys
 from music import music_player
+import socket
+
+from database import Database
 
 class PlayActionScreen(QWidget):
-    def __init__(self, red_players, green_players, photon_network, player_entry_screen_instance, parent=None):
-        super().__init__(parent)
-        self.setWindowTitle("Play Action Screen")
-        self.showMaximized()
-        self.setStyleSheet("background-color: black; color: white;")
+    def __init__(self, ip_address, red_players, green_players, on_exit):
+        super().__init__()
+
+        # Server information
+        self.ip = ip_address
+        self.port   = 7501
+        self.bufferSize  = 1024
 
         # Store players with their equipment IDs
         self.red_players = red_players
         self.green_players = green_players
-        self.photon_network = photon_network
-        self.player_entry_screen = player_entry_screen_instance 
+        self.ip_address = ip_address
+
+        self.exit = on_exit
+        self.setWindowTitle("Play Action Screen")
+        self.showMaximized()
+        self.setStyleSheet("background-color: black; color: white;")
 
         main_layout = QHBoxLayout()
 
@@ -78,11 +87,21 @@ class PlayActionScreen(QWidget):
 
         self.setLayout(main_layout)
 
-        # Initialize and start game timer (6 minutes)
-        self.game_time_remaining = 6 * 60  # 6 minutes in seconds
+        # Initialize game timer (6 minutes)
+        self.game_time_remaining = 6 * 60
         self.game_timer = QTimer(self)
-        # self.game_timer.timeout.connect(self.update_game_timer)
-        self.game_timer.start(1000)  # Update every second
+        self.game_timer.timeout.connect(self.update_game_timer)
+
+        # Initialize UDP server
+        self.UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+        self.UDPServerSocket.bind(self.ip, self.port)
+        self.UDPServerSocket.setblocking(False)
+
+        self.server_timer = QTimer(self)
+        self.server_timer.timeout.connect(self.server_listener)
+        self.server_timer.start(100)
+
+        # self.game_timer.start(1000)
 
     def update_game_timer(self):
         """Update the game timer display every second."""
@@ -100,6 +119,9 @@ class PlayActionScreen(QWidget):
             minutes = self.game_time_remaining // 60
             seconds = self.game_time_remaining % 60
             self.game_timer_label.setText(f"{minutes:02d}:{seconds:02d}")
+
+    def server_listener(self):
+        pass
 
     def closeEvent(self, event):
         music_player.stop_music()

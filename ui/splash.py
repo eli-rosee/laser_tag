@@ -11,6 +11,7 @@ class SplashScreen(QMainWindow):
         # Sets some basic elements of the window
         self.setGeometry(100, 100, 800, 600)
         self.setStyleSheet("background-color: black;")
+        self.setWindowTitle(".")
 
         # Establishes the label and fills it in with the logo image
         self.label = QLabel(self)

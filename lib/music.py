@@ -7,17 +7,17 @@ import pygame
 class MusicPlayer:
     def __init__(self):
         self.tracks = [
-            "music/Track01.mp3",
-            "music/Track02.mp3",
-            "music/Track03.mp3",
-            "music/Track04.mp3",
-            "music/Track05.mp3",
-            "music/Track06.mp3",
-            "music/Track07.mp3",
-            "music/Track08.mp3"
+            "assets/music/Track01.mp3",
+            "assets/music/Track02.mp3",
+            "assets/music/Track03.mp3",
+            "assets/music/Track04.mp3",
+            "assets/music/Track05.mp3",
+            "assets/music/Track06.mp3",
+            "assets/music/Track07.mp3",
+            "assets/music/Track08.mp3"
         ]
-        self.playing = False
         pygame.mixer.init()
+        self.playing = False
 
     def play_random_music(self):
         if self.playing:

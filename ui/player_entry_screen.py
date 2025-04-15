@@ -4,15 +4,17 @@ from PyQt6.QtCore import Qt
 import sys
 import ipaddress
 
-sys.path.insert(1, 'core/')
+sys.path.insert(1, 'lib/')
 import database
 
 class PlayerEntryScreen(QWidget):
     
-    def __init__(self):
+    def __init__(self, on_exit):
 
         # IP ADDRESS (Can be changed)
         self.network = "127.0.0.1"
+        
+        self.start_game = on_exit
 
         # Declare and initiate some basic attributes of the Player Entry Screen Window
         super().__init__()
@@ -305,9 +307,26 @@ class PlayerEntryScreen(QWidget):
         popup.setLayout(layout)
         popup.exec()
 
-    # Handles the start game button functionality
-    def start_game(self):
-        print("Starting Game")
+    # Collects player data into two // ADD READ ONLY CHECK SO THAT ONLY ENTERED ROWS WILL REGISTER
+    def get_player_data(self):
+        red_players = []
+        green_players = []
+
+        for row in self.red_row:
+            player_id = row[2].text().strip()
+            code_name = row[3].text().strip()
+            equip_id = row[4].text().strip()
+            if player_id and code_name and equip_id: 
+                red_players.append((player_id, code_name, equip_id))
+
+        for row in self.green_row:
+            player_id = row[2].text().strip()
+            code_name = row[3].text().strip()
+            equip_id = row[4].text().strip()
+            if player_id and code_name and equip_id: 
+                green_players.append((player_id, code_name, equip_id))
+
+        return red_players, green_players
 
 
 # Runs an instance of the PlayerEntryScreen (for testing purposes)

@@ -4,7 +4,7 @@ from PyQt6.QtCore import Qt
 import sys
 import ipaddress
 
-sys.path.insert(1, '../core/')
+sys.path.insert(1, 'core/')
 import database
 
 class PlayerEntryScreen(QWidget):
@@ -310,6 +310,7 @@ class PlayerEntryScreen(QWidget):
         print("Starting Game")
 
 
+# Runs an instance of the PlayerEntryScreen (for testing purposes)
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     self = PlayerEntryScreen()

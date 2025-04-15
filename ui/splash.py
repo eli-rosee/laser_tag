@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QMainWindow, QLabel, QApplication
 from PyQt6.QtGui import QPixmap
 import sys
+import time
 
 class SplashScreen(QMainWindow):
     def __init__(self):
@@ -13,20 +14,19 @@ class SplashScreen(QMainWindow):
 
         # Establishes the label and fills it in with the logo image
         self.label = QLabel(self)
-        self.pixmap = QPixmap("../assets/images/logo.jpg")
+        self.pixmap = QPixmap("assets/images/logo.jpg")
         self.label.setPixmap(self.pixmap)
 
         # Ensure the image scales with the label and maximizes it
         self.label.setScaledContents(True)
-        self.showMaximized()
 
+    # Adjust label size when window is resized
     def resizeEvent(self, event):
-        # Adjust label size when window is resized
         self.label.setGeometry(0, 0, self.width(), self.height())
         event.accept()
 
+# Initializes and runs the SplashScreen class (testing purposes)
 if __name__ == "__main__":
-    # Initializes and runs the MainWindow class
     app = QApplication(sys.argv)
     window = SplashScreen()
     window.show()

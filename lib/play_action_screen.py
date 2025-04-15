@@ -11,8 +11,9 @@ class PlayActionScreen(QWidget):
         super().__init__()
 
         # Server information
-        self.ip = ip_address
-        self.port   = 7501
+        self.serverAddressPort = (ip_address, 7500)
+        self.clientAddressPort = (ip_address, 7501)
+
         self.bufferSize  = 1024
 
         # Store players with their equipment IDs
@@ -92,16 +93,20 @@ class PlayActionScreen(QWidget):
         self.game_timer = QTimer(self)
         self.game_timer.timeout.connect(self.update_game_timer)
 
-        # Initialize UDP server
-        self.UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
-        self.UDPServerSocket.bind(self.ip, self.port)
-        self.UDPServerSocket.setblocking(False)
+        # Create datagram sockets
+        self.UDPClientSocketReceive = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+        self.UDPServerSocketTransmit = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+
+        self.UDPClientSocketReceive.bind(self.clientAddressPort)
+        self.UDPClientSocketReceive.setblocking(False)
 
         self.server_timer = QTimer(self)
         self.server_timer.timeout.connect(self.server_listener)
-        self.server_timer.start(100)
 
-        # self.game_timer.start(1000)
+        self.server_timer.start(100)
+        self.game_timer.start(1000)
+
+        self.UDPServerSocketTransmit.sendto(str.encode(str(202)), self.serverAddressPort)
 
     def update_game_timer(self):
         """Update the game timer display every second."""
@@ -121,7 +126,20 @@ class PlayActionScreen(QWidget):
             self.game_timer_label.setText(f"{minutes:02d}:{seconds:02d}")
 
     def server_listener(self):
-        pass
+        try:
+            raw_data = self.UDPClientSocketReceive.recvfrom(self.bufferSize)
+            raw_player_data = raw_data[0]
+            player_data = raw_player_data.decode('utf-8')
+            print(f'Transmitted: {player_data}')
+
+            parts = player_data.split(':')
+            shooting_player = parts[0]
+            shot_player = parts[1]
+
+            print(f'Player with equip ID {shooting_player} has shot {shot_player}')
+
+        except BlockingIOError:
+            pass
 
     def closeEvent(self, event):
         music_player.stop_music()

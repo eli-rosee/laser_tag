@@ -15,7 +15,7 @@ class CountdownWindow(QMainWindow):
 
         self.setGeometry(700, 300, 500, 500)
         self.setStyleSheet("background-color: black;")
-        self.setWindowTitle(".")
+        self.setWindowTitle("Countdown")
 
         self.background_label = QLabel(self)
         self.background_label.setScaledContents(True)

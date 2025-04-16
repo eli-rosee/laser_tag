@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6.QtCore import QTimer
 import sys
 import signal
+import socket
 
 from ui.splash import SplashScreen
 from ui.player_entry_screen import PlayerEntryScreen
@@ -67,6 +68,12 @@ class MainWindow(QMainWindow):
 
     def close_play_action(self):
         if self.play_action_screen:
+            UDPTransmitSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+
+            if(self.play_action_screen._running):
+                for i in range(3):
+                    UDPTransmitSocket.sendto(str.encode(str(221)), (self.ip_address, 7500))
+
             self.play_action_screen.close()
             self.play_action_screen.destroy()
             self.play_action_screen = None

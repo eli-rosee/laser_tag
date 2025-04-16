@@ -218,7 +218,7 @@ class PlayerEntryScreen(QWidget):
         elif key == 16777266:
             self.start_game()
         # Handler for the Enter key press
-        elif key == 16777220 or key == 16777221:
+        elif key == 16777220:
             enter_field1 = None
             enter_field2 = None
             enter_field3 = None
@@ -253,9 +253,9 @@ class PlayerEntryScreen(QWidget):
                 self.red_row, 
                 self.green_row
             )
-            if enter_field3:
-                self.UDPBroadcast.sendto(str.encode(str(enter_field3)), self.broadcast)
-                print(f'Broadcasting on port {self.broadcast_port}: {enter_field3}')
+            if enter_field3 and enter_field3.text():
+                self.UDPBroadcast.sendto(str.encode(str(enter_field3.text())), self.broadcast)
+                print(f'Broadcasting on port {self.broadcast_port}: {enter_field3.text()}')
 
         super().keyPressEvent(event)
 

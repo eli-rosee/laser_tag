@@ -3,6 +3,7 @@ from PyQt6.QtGui import QKeyEvent
 from PyQt6.QtCore import Qt
 import sys
 import ipaddress
+import socket
 
 sys.path.insert(1, 'lib/')
 import database
@@ -13,6 +14,9 @@ class PlayerEntryScreen(QWidget):
 
         # IP ADDRESS (Can be changed)
         self.network = "127.0.0.1"
+        self.broadcast_port = 7500
+        self.broadcast = (self.network, self.broadcast_port)
+        self.UDPBroadcast = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         
         self.start_game = on_exit
 
@@ -249,6 +253,9 @@ class PlayerEntryScreen(QWidget):
                 self.red_row, 
                 self.green_row
             )
+            if enter_field3:
+                self.UDPBroadcast.sendto(str.encode(str(enter_field3)), self.broadcast)
+                print(f'Broadcasting on port {self.broadcast_port}: {enter_field3}')
 
         super().keyPressEvent(event)
 
@@ -273,6 +280,7 @@ class PlayerEntryScreen(QWidget):
             ipaddress.ip_address(ip_input.text())
             popup.accept()
             self.network = ip_input.text()
+            self.broadcast = (self.network, self.broadcast_port)
 
         except ValueError:
             ip_input.setText("")

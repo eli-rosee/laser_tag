@@ -40,10 +40,14 @@ class MainWindow(QMainWindow):
         if self.player_entry_screen:
             self.ip_address = self.player_entry_screen.network
             self.red_players, self.green_players = self.player_entry_screen.get_player_data()
-            self.player_entry_screen.close()
-            self.player_entry_screen.destroy()
-            self.player_entry_screen = None
-            self.open_countdown()
+            if self.red_players and self.green_players:
+                self.player_entry_screen.close()
+                self.player_entry_screen.destroy()
+                self.player_entry_screen = None
+                self.open_countdown()
+            else:
+                self.player_entry_screen.directions.setText("Error. Each team needs at least one player to run the program.")
+                self.player_entry_screen.clear_game
 
     def open_countdown(self):
         self.countdown_screen = CountdownWindow(on_exit=self.close_countdown)

@@ -27,16 +27,7 @@ class CountdownWindow(QMainWindow):
 
         self.showMaximized()  
 
-        self.show_logo()
-
-    def show_logo(self):
-        """Displays the logo before the countdown starts."""
-        logo_path = "assets/images/logo.jpg"
-        if os.path.exists(logo_path):
-            self.countdown_label.setPixmap(QPixmap(logo_path))
-            QTimer.singleShot(2000, self.start_countdown)
-        else:
-            print("Warning: Logo not found.")
+        self.start_countdown()
 
     def start_countdown(self):
         """Starts the countdown timer and updates images every second."""

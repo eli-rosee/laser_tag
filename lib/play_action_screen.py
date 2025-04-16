@@ -139,7 +139,7 @@ class PlayActionScreen(QWidget):
         self.setLayout(main_layout)
 
         # Initialize and start game timer (6 minutes)
-        self.game_time_remaining = 30  # 6 minutes in seconds
+        self.game_time_remaining = 6 * 60  # 6 minutes in seconds
         self.game_timer = QTimer(self)
         self.game_timer.timeout.connect(self.update_game_timer)
         self.game_timer.start(1000)  # Update every second
@@ -207,7 +207,7 @@ class PlayActionScreen(QWidget):
                     base_hit_text = f"{attacker_name} hit the base!"
                     self.append_to_current_action(f"<div style='text-align: center;'>{base_hit_text}</div>")
                     self.change_team_score(base_hit_text)
-                    self.UDPServerSocketTransmit.sendto(str.encode(str(target_or_code)), self.serverAddressPort)
+                    self.UDPServerSocketTransmit.sendto(str.encode(str(attacker_equip_id)), self.serverAddressPort)
                 else:
                     target_name = self.get_name_from_equip_id(target_or_code)
                     action = f"{attacker_name} hit {target_name}"

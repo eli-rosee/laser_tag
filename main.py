@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6.QtCore import QTimer
 import sys
+import signal
 
 from ui.splash import SplashScreen
 from ui.player_entry_screen import PlayerEntryScreen

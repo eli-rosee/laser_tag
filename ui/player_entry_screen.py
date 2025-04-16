@@ -96,14 +96,19 @@ class PlayerEntryScreen(QWidget):
             input_field2.setStyleSheet("background-color: white; color: black;")
             input_field3.setStyleSheet("background-color: white; color: black;")
 
+            num_label.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+            input_field1.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+            input_field2.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+            input_field3.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+
             input_field2.setReadOnly(True)
             input_field3.setReadOnly(True)
 
             arrow_label = QLabel(">>")  
             arrow_label.setStyleSheet("font-weight: bold; color: white;")
-            
             arrow_label.setVisible(False)
-
+            arrow_label.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+            
             # Adds row to the red_row list and to the GUI
             self.red_row.append((arrow_label, num_label, input_field1, input_field2, input_field3))
             self.red_team_list.addWidget(arrow_label, i, 0)
@@ -160,12 +165,18 @@ class PlayerEntryScreen(QWidget):
             input_field2.setStyleSheet("background-color: white; color: black;")
             input_field3.setStyleSheet("background-color: white; color: black;")
 
+            num_label.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+            input_field1.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+            input_field2.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+            input_field3.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+
             input_field2.setReadOnly(True)
             input_field3.setReadOnly(True)
 
-            arrow_label = QLabel(">>")  
+            arrow_label = QLabel(">>")
             arrow_label.setStyleSheet("font-weight: bold; color: white;")
             arrow_label.setVisible(False)
+            arrow_label.setFocusPolicy(Qt.FocusPolicy.NoFocus)
 
             # Adds row to the red_row list and to the GUI
             self.green_row.append((arrow_label, num_label, input_field1, input_field2, input_field3))
@@ -193,7 +204,7 @@ class PlayerEntryScreen(QWidget):
         for index, label in button_labels.items():
             button = QPushButton(label)
             button.setStyleSheet("background-color: white; color: green; font-size: 12px;")
-            button.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+            button.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
             self.button_layout.addWidget(button)
             self.buttons[index] = button 
         
